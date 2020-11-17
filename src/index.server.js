@@ -12,6 +12,7 @@ const authAdminRoutes = require('./routes/admin/auth');
 const categoryRoutes = require('./routes/category');
 const productRoutes = require('./routes/product');
 const cartRoutes = require('./routes/cart');
+const  initalData  = require('./routes/admin/initalData');
 
 //environment variable 
 env.config();
@@ -30,6 +31,7 @@ app.use('/api', categoryRoutes)
 app.use('/api', categoryRoutes)
 app.use('/api', productRoutes)
 app.use('/api', cartRoutes)
+app.use('/api', initalData)
 
 //mongodb connection 
 //mongodb+srv://mern-ecom-user:<password>@cluster0.zyu41.mongodb.net/<dbname>?retryWrites=true&w=majority
